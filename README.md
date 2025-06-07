@@ -78,10 +78,6 @@ A mid-sized enterprise is transitioning to IPv6. The team is responsible for des
 
 * PCs auto-configured IPv6 addresses via **SLAAC**.
 
-### Fallback Mechanisms
-
-* IPv4 ping tests verified, e.g., `192.168.2.1`, `192.168.7.1`.
-
 ### Link Failure Simulation
 
 * Simulated failure on `Serial0/2/0`.
