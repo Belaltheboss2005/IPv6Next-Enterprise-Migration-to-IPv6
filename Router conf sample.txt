@@ -1,0 +1,196 @@
+Router>en
+Router#
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interf
+Router(config)#interface gig
+Router(config)#interface gigabitEthernet 0/0/0
+Router(config-if)#ipa add
+Router(config-if)#ip a
+Router(config-if)#ip add
+Router(config-if)#ip address 192.168.3.1 255.255.255.0
+Router(config-if)#no sh
+Router(config-if)#no shutdown 
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0/0, changed state to up
+
+Router(config-if)#ex
+Router(config)#ine
+Router(config)#inte
+Router(config)#interface ser
+Router(config)#interface serial 0/1/0
+Router(config-if)#ip add
+Router(config-if)#ip address 10.0.0.6 255.255.255.252
+Router(config-if)#no sh
+
+%LINK-5-CHANGED: Interface Serial0/1/0, changed state to down
+Router(config-if)#ex
+Router(config)#inter
+Router(config)#interface ser
+Router(config)#interface serial 0/1/1
+Router(config-if)#ip addr
+Router(config-if)#ip address 10.0.0.29 255.255.255.252
+Router(config-if)#no sh
+Router(config-if)#no shutdown 
+
+%LINK-5-CHANGED: Interface Serial0/1/1, changed state to down
+Router(config-if)#ex
+Router(config)#inter
+Router(config)#interface ser
+Router(config)#interface serial 0/2/0
+Router(config-if)#ip add
+Router(config-if)#ip address 10.0.0.13 255.255.255.252
+Router(config-if)#no sh
+Router(config-if)#no shutdown 
+
+%LINK-5-CHANGED: Interface Serial0/2/0, changed state to down
+Router(config-if)#
+Router(config-if)#ex
+Router(config)#ex
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+wr
+Building configuration...
+[OK]
+Router#
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#router ospf
+% Incomplete command.
+Router(config)#router ospf 1
+Router(config-router)#net
+Router(config-router)#network 192.168.3.0 0.0.0.255
+% Incomplete command.
+Router(config-router)#network 192.168.3.0 0.0.0.255 area 0
+Router(config-router)#network 10.0.0.4 0.0.0.3 area 0
+Router(config-router)#network 10.0.0.12 0.0.0.3 area 0
+Router(config-router)#network 10.0.0.28 0.0.0.3 area 0
+Router(config-router)#no sh
+Router(config-router)#ex
+Router(config)#ex
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Router#wr
+Building configuration...
+[OK]
+Router#
+Router#en
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#inter
+Router(config)#interface gig
+Router(config)#interface gigabitEthernet 0/0/0
+Router(config-if)#ipv6 add
+Router(config-if)#ipv6 address 2001:db8:acad:13::1/64
+Router(config-if)#ipv6 ena
+Router(config-if)#ipv6 enable 
+Router(config-if)#no sh
+Router(config-if)#ex
+Router(config)#inter
+Router(config)#interface ser
+Router(config)#interface serial 0/1/0
+Router(config-if)#ipv6 add
+Router(config-if)#ipv6 address 2001:db8:acad:2::2/64
+Router(config-if)#ipv6 en
+Router(config-if)#ipv6 enable 
+Router(config-if)#no sh
+Router(config-if)#no shutdown 
+Router(config-if)#ex
+Router(config)#inter
+Router(config)#interface ser
+Router(config)#interface serial 0/1/1
+Router(config-if)#ipv6 address 2001:db8:acad:4::1/64
+Router(config-if)#ipv6 en
+Router(config-if)#ipv6 enable 
+Router(config-if)#no sh
+Router(config-if)#ex
+Router(config)#inter
+Router(config)#interface ser
+Router(config)#interface serial 0/2/0
+Router(config-if)#ipv6 add
+Router(config-if)#ipv6 address 2001:db8:acad:5::1/64
+Router(config-if)#ipv6 enable
+Router(config-if)#no sh
+Router(config-if)#ex
+Router(config)#ex
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Router#wr
+Building configuration...
+[OK]
+Router#
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#inter
+Router(config)#interface gig
+Router(config)#interface gigabitEthernet 0/0/0
+Router(config-if)#ipv6 ospf 1 area 0
+Router(config-if)#no sh
+Router(config-if)#ex
+Router(config)#inter ser
+Router(config)#inter serial 0/1/0
+Router(config-if)#ipv6 ospf 1 area 0
+Router(config-if)#no sh
+Router(config-if)#ex
+Router(config)#inter seri 0/1/1
+Router(config-if)#ipv6 ospf 1 area 0
+Router(config-if)#no sh
+Router(config-if)#ex
+Router(config)#inter seri 0/2/0
+Router(config-if)#ipv6 ospf 1 area 0
+Router(config-if)#no sh
+Router(config-if)#ex
+Router(config)#ex
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Router#wr
+Building configuration...
+[OK]
+Router#reload
+Proceed with reload? [confirm]
+Initializing Hardware ...
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/0, changed state to up
+
+%LINK-5-CHANGED: Interface Serial0/1/0, changed state to up
+
+%LINK-5-CHANGED: Interface Serial0/1/1, changed state to up
+
+%LINK-5-CHANGED: Interface Serial0/2/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/1/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/2/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/1/0, changed state to up
+
+00:00:10: %OSPFv3-5-ADJCHG: Process 1, Nbr 192.168.4.1 on Serial0/1/1 from LOADING to FULL, Loading Done
+
+00:00:10: %OSPF-5-ADJCHG: Process 1, Nbr 4.4.4.4 on Serial0/1/1 from LOADING to FULL, Loading Done
+
+00:00:10: %OSPF-5-ADJCHG: Process 1, Nbr 1.1.1.1 on Serial0/1/0 from LOADING to FULL, Loading Done
+
+00:00:10: %OSPFv3-5-ADJCHG: Process 1, Nbr 192.168.1.1 on Serial0/1/0 from LOADING to FULL, Loading Done
+
+00:00:20: %OSPF-5-ADJCHG: Process 1, Nbr 5.5.5.5 on Serial0/2/0 from LOADING to FULL, Loading Done
+
+00:00:20: %OSPFv3-5-ADJCHG: Process 1, Nbr 192.168.5.1 on Serial0/2/0 from LOADING to FULL, Loading Done
+
+%LINK-3-UPDOWN: Interface Serial0/2/0, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/2/0, changed state to down
+
+00:00:41: %OSPFv3-5-ADJCHG: Process 1, Nbr 192.168.5.1 on Serial0/2/0 from FULL to DOWN, Neighbor Down: Interface down or detached
+
+00:00:41: %OSPF-5-ADJCHG: Process 1, Nbr 5.5.5.5 on Serial0/2/0 from FULL to DOWN, Neighbor Down: Interface down or detached
+
+%LINK-5-CHANGED: Interface Serial0/2/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/2/0, changed state to up
+
+00:01:11: %OSPF-5-ADJCHG: Process 1, Nbr 5.5.5.5 on Serial0/2/0 from LOADING to FULL, Loading Done
+
+00:01:11: %OSPFv3-5-ADJCHG: Process 1, Nbr 10.0.0.33 on Serial0/2/0 from LOADING to FULL, Loading Done

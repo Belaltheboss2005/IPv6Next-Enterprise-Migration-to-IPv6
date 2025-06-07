@@ -1,0 +1,59 @@
+
+Cisco Packet Tracer PC Command Line 1.0
+C:\>ping 192.168.2.1
+
+Pinging 192.168.2.1 with 32 bytes of data:
+
+Reply from 192.168.2.1: bytes=32 time=25ms TTL=254
+Reply from 192.168.2.1: bytes=32 time=1ms TTL=254
+Reply from 192.168.2.1: bytes=32 time=1ms TTL=254
+Reply from 192.168.2.1: bytes=32 time=15ms TTL=254
+
+Ping statistics for 192.168.2.1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 25ms, Average = 10ms
+
+C:\>ping 192.168.7.1
+
+Pinging 192.168.7.1 with 32 bytes of data:
+
+Reply from 192.168.7.1: bytes=32 time=27ms TTL=252
+Reply from 192.168.7.1: bytes=32 time=16ms TTL=252
+Reply from 192.168.7.1: bytes=32 time=26ms TTL=252
+Reply from 192.168.7.1: bytes=32 time=2ms TTL=252
+
+Ping statistics for 192.168.7.1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 2ms, Maximum = 27ms, Average = 17ms
+
+C:\>ping 192.168.7.2
+
+Pinging 192.168.7.2 with 32 bytes of data:
+
+Reply from 192.168.7.2: bytes=32 time=13ms TTL=124
+Reply from 192.168.7.2: bytes=32 time=10ms TTL=124
+Reply from 192.168.7.2: bytes=32 time=2ms TTL=124
+Reply from 192.168.7.2: bytes=32 time=2ms TTL=124
+
+Ping statistics for 192.168.7.2:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 2ms, Maximum = 13ms, Average = 6ms
+
+C:\>ping 192.168.8.2
+
+Pinging 192.168.8.2 with 32 bytes of data:
+
+Reply from 192.168.8.2: bytes=32 time=19ms TTL=123
+Reply from 192.168.8.2: bytes=32 time=15ms TTL=123
+Reply from 192.168.8.2: bytes=32 time=9ms TTL=123
+Reply from 192.168.8.2: bytes=32 time=2ms TTL=123
+
+Ping statistics for 192.168.8.2:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 2ms, Maximum = 19ms, Average = 11ms
+
+C:\>
