@@ -6,6 +6,10 @@ A mid-sized enterprise is transitioning to IPv6. The team is responsible for des
 
 ---
 
+The project focuses on transitioning a mid-sized enterprise network from IPv4 to a dual-stack IPv4/IPv6 architecture. The team designed and simulated the network in Cisco Packet Tracer, implementing OSPFv3 for IPv6 and OSPF for IPv4. A structured addressing scheme was applied, using /30 for router links and /24 for LANs, with consistent IPv6 subnets.
+
+---
+
 ## Functionality
 
 * Implement dual-stack addressing.
